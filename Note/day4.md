@@ -20,3 +20,12 @@ localStorage.setItem(TODOS_LS, toDos)
 그런데 이렇게 저장하니까 자바스크립트에 데이터 저장이 어려움
 자바스크립트는 로컬 스토리지에 있는 모든 데이터를 스트링으로 저장하려고 함 >> JSON.stringify(toDos)
 parse 는 다시 스트링에서 다시 데이터타입으로 변경
+
+parsedToDos.forEach() : ForEach 기본적으로 함수를 실행하는데 array에 담겨있는것들 각각에 함수 실행
+
+\*\*DELETE
+const btn = event. target :: 무엇이 선택됐는지 html로 보여줌
+event.target.parentNode : 누가 선택됐는지를 id값 포함 볼 수 있음
+toDoList.removeChild(li) : 지우고 싶을 때  
+toDos.filter : 함수 하나를 실행시키는데 forEach처럼 함수를 실행시키고, 그 값을 만족시키는 아이템들만 가지고 새로운 어레이를 만듬 >> toDos.filter(function(toDo){return toDo.id !== li.id})
+그런데 여기에서 데이터 타입이 달랐기 때문에 스트링을 일반 숫자로 돌리기 위해 pareseInt 사용
